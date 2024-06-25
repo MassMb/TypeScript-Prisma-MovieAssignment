@@ -180,7 +180,7 @@ async function addGenre() {
 async function addGenreToMovie() {
     // Expected:
     // 1. Prompt the user for multiple genres to add (comma separated).
-    const genres = readlineSync.question("Enter multiple genre seperated by comma:  ");
+    const genres = readlineSync.question("Enter multiple genre seperated by comma:  ").toLowerCase();
     // 2. Split the input into an array of genre names.
     const newGenres = genres.split(',');
     // 3. Use Prisma client to create multiple genres with the provided names.
